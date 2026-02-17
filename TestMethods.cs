@@ -48,17 +48,19 @@
         {
             List<int> result = new List<int>();
 
-            for (int i = 0; i <= n; i++)
-
+            // Generamos exactamente 'n' elementos
+            for (int i = 0; i < n; i++)
             {
                 int value = i * i;
 
+                // Si i es impar, el valor es negativo
                 if (i % 2 == 1)
                     value = -value;
 
                 result.Add(value);
             }
 
+            // Ordenamiento Bubble Sort (Ascendente)
             for (int i = 0; i < result.Count - 1; i++)
             {
                 for (int j = 0; j < result.Count - i - 1; j++)
@@ -74,7 +76,6 @@
 
             return result;
         }
-
 
         public static bool FindNumberInSortedList(int target, in List<int> list)
         {
@@ -130,10 +131,11 @@
 
         public static bool IsPrime(int n)
         {
-            if (n <= 1)
-                return false;
+            if (n <= 1) return false;
+            if (n == 2) return true; // El 2 es primo
+            if (n % 2 == 0) return false; // Pares fuera
 
-            for (int i = 2; i < n; i++)
+            for (int i = 3; i * i <= n; i += 2) // Solo probamos impares hasta la raíz cuadrada
                 if (n % i == 0)
                     return false;
 
