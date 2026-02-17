@@ -48,7 +48,8 @@
         {
             List<int> result = new List<int>();
 
-            for (int i = 1; i <= n; i++)
+            for (int i = 0; i <= n; i++)
+
             {
                 int value = i * i;
 
@@ -184,6 +185,5 @@
 
             return queue;
         }
-
     }
     }
