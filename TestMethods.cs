@@ -48,19 +48,19 @@
         {
             List<int> result = new List<int>();
 
-            // Generamos exactamente 'n' elementos
+
             for (int i = 0; i < n; i++)
             {
                 int value = i * i;
 
-                // Si i es impar, el valor es negativo
+   
                 if (i % 2 == 1)
                     value = -value;
 
                 result.Add(value);
             }
 
-            // Ordenamiento Bubble Sort (Ascendente)
+   
             for (int i = 0; i < result.Count - 1; i++)
             {
                 for (int j = 0; j < result.Count - i - 1; j++)
